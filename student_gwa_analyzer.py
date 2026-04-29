@@ -5,7 +5,7 @@ class StudentGWAAnalyzer:
         self.students = []
 
     def analyze(self) -> None:
-        print("STUDENT GWA ANALYZER")
+        print("\033[93mSTUDENT GWA ANALYZER\033[0m")
         print("*" * 60)
 
         # Step 1: Load students
@@ -56,9 +56,9 @@ class StudentGWAAnalyzer:
         return min(self.students, key=lambda x: x["gwa"])
 
     def _display_results(self, top_student: dict) -> None:
-        print(f"TOP STUDENT: {top_student['name']}")
-        print(f"GWA:   {top_student['gwa']:.2f}")
-        print(f"Rank:  1st out of {len(self.students)} students")
+        print(f"TOP STUDENT: \033[1m{top_student['name']}\033[0m")
+        print(f"GWA:    \033[1m{top_student['gwa']:.2f}\033[0m")
+        print(f"Rank:   \033[1m1st out of {len(self.students)} students\033[0m")
 
 def main():
     try:
