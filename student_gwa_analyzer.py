@@ -1,8 +1,4 @@
 class StudentGWAAnalyzer:
-    """
-    Analyzes students.txt to find student with HIGHEST GWA (1.00 = BEST).
-    REQUIRES existing students.txt file with format: "Name GWA"
-    """
 
     def __init__(self, filename: str = "students.txt"):
         self.filename = filename
